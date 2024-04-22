@@ -109,7 +109,7 @@ JobClient.runJob(conf);
 }
 }
 
-javac -classpath &quot;$(hadoop classpath)&quot; -d . WC_Mapper.java WC_Reducer.java WC_Runner.java
+javac -classpath "$(hadoop classpath)" -d . WC_Mapper.java WC_Reducer.java WC_Runner.java
 jar -cvf wordcount.jar com
-hadoop jar /home/hadoop/hadoop/wordcount.jar com.javatpoint.WC_Runner/test_wc/data1.txt /r_output
+hadoop jar /home/hadoop/hadoop/wordcount.jar com.WC.WC_Runner/test_wc/data1.txt /output
 hdfs dfs -cat /r_output/part-00000
